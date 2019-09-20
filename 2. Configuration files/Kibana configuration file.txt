@@ -1,0 +1,507 @@
+DASHBOARD Filters: kibanaSavedObjectMeta.searchSourceJSON:
+{
+  "query": {
+    "language": "lucene",
+    "query": ""
+  },
+  "filter": [
+    {
+      "$state": {
+        "store": "appState"
+      },
+      "meta": {
+        "alias": "magnetic_x filter",
+        "disabled": true,
+        "index": "117f5f30-78b3-11e9-9a3f-fddd48bc7817",
+        "key": "magnetic_x",
+        "negate": false,
+        "params": {
+          "gte": -9999999999999,
+          "lt": 9999999999999
+        },
+        "type": "range",
+        "value": "-9,999,999,999,999 to 9,999,999,999,999"
+      },
+      "range": {
+        "magnetic_x": {
+          "gte": -9999999999999,
+          "lt": 9999999999999
+        }
+      }
+    },
+    {
+      "$state": {
+        "store": "appState"
+      },
+      "meta": {
+        "alias": "acc_x filter",
+        "disabled": true,
+        "index": "117f5f30-78b3-11e9-9a3f-fddd48bc7817",
+        "key": "linear_x",
+        "negate": false,
+        "params": {
+          "gte": -999999999999,
+          "lt": 999999999999
+        },
+        "type": "range",
+        "value": "-999,999,999,999 to 999,999,999,999"
+      },
+      "range": {
+        "linear_x": {
+          "gte": -999999999999,
+          "lt": 999999999999
+        }
+      }
+    },
+    {
+      "$state": {
+        "store": "appState"
+      },
+      "meta": {
+        "alias": "gyro_x filter",
+        "disabled": true,
+        "index": "117f5f30-78b3-11e9-9a3f-fddd48bc7817",
+        "key": "gyro_x",
+        "negate": false,
+        "params": {
+          "gte": -999999999999,
+          "lt": 999999999999
+        },
+        "type": "range",
+        "value": "-999,999,999,999 to 999,999,999,999"
+      },
+      "range": {
+        "gyro_x": {
+          "gte": -999999999999,
+          "lt": 999999999999
+        }
+      }
+    },
+    {
+      "$state": {
+        "store": "appState"
+      },
+      "meta": {
+        "alias": "cid_pci filter",
+        "disabled": true,
+        "index": "117f5f30-78b3-11e9-9a3f-fddd48bc7817",
+        "key": "cid_pci",
+        "negate": true,
+        "params": {
+          "query": -1,
+          "type": "phrase"
+        },
+        "type": "phrase",
+        "value": "-1"
+      },
+      "query": {
+        "match": {
+          "cid_pci": {
+            "query": -1,
+            "type": "phrase"
+          }
+        }
+      }
+    },
+    {
+      "$state": {
+        "store": "appState"
+      },
+      "meta": {
+        "alias": "power network filter",
+        "disabled": true,
+        "index": "117f5f30-78b3-11e9-9a3f-fddd48bc7817",
+        "key": "rssi_rscp",
+        "negate": true,
+        "params": {
+          "query": 99,
+          "type": "phrase"
+        },
+        "type": "phrase",
+        "value": "99"
+      },
+      "query": {
+        "match": {
+          "rssi_rscp": {
+            "query": 99,
+            "type": "phrase"
+          }
+        }
+      }
+    },
+    {
+      "$state": {
+        "store": "appState"
+      },
+      "meta": {
+        "alias": "speed filter",
+        "disabled": true,
+        "index": "117f5f30-78b3-11e9-9a3f-fddd48bc7817",
+        "key": "gps_speed",
+        "negate": false,
+        "params": {
+          "gte": -99999,
+          "lt": 99999
+        },
+        "type": "range",
+        "value": "-99,999 to 99,999"
+      },
+      "range": {
+        "gps_speed": {
+          "gte": -99999,
+          "lt": 99999
+        }
+      }
+    },
+    {
+      "$state": {
+        "store": "appState"
+      },
+      "meta": {
+        "alias": null,
+        "disabled": true,
+        "index": "117f5f30-78b3-11e9-9a3f-fddd48bc7817",
+        "key": "gps_satellites",
+        "negate": false,
+        "params": {
+          "gte": 2,
+          "lt": null
+        },
+        "type": "range",
+        "value": "2 to +?"
+      },
+      "range": {
+        "gps_satellites": {
+          "gte": 2,
+          "lt": null
+        }
+      }
+    },
+    {
+      "$state": {
+        "store": "appState"
+      },
+      "meta": {
+        "alias": "Meters of Accuracy < 30",
+        "disabled": true,
+        "index": "117f5f30-78b3-11e9-9a3f-fddd48bc7817",
+        "key": "gps_accuracy",
+        "negate": false,
+        "params": {
+          "gte": 1,
+          "lt": 30
+        },
+        "type": "range",
+        "value": "1 to 30"
+      },
+      "range": {
+        "gps_accuracy": {
+          "gte": 1,
+          "lt": 30
+        }
+      }
+    },
+    {
+      "geo_polygon": {
+        "ignore_unmapped": true,
+        "location": {
+          "points": [
+            {
+              "lat": 45.14498468514922,
+              "lon": 7.551727294921876
+            },
+            {
+              "lat": 45.1165324410826,
+              "lon": 7.840805053710938
+            },
+            {
+              "lat": 44.980084353075185,
+              "lon": 7.757720947265626
+            },
+            {
+              "lat": 45.03348650826708,
+              "lon": 7.470703125000001
+            }
+          ]
+        }
+      },
+      "meta": {
+        "negate": false,
+        "index": "117f5f30-78b3-11e9-9a3f-fddd48bc7817",
+        "disabled": true,
+        "alias": "Turin",
+        "type": "geo_polygon",
+        "key": "location",
+        "value": "{\n  \"lat\": 45.14498468514922,\n  \"lon\": 7.551727294921876\n}, {\n  \"lat\": 45.1165324410826,\n  \"lon\": 7.840805053710938\n}, {\n  \"lat\": 44.980084353075185,\n  \"lon\": 7.757720947265626\n}, {\n  \"lat\": 45.03348650826708,\n  \"lon\": 7.470703125000001\n}",
+        "params": {
+          "points": [
+            {
+              "lat": 45.14498468514922,
+              "lon": 7.551727294921876
+            },
+            {
+              "lat": 45.1165324410826,
+              "lon": 7.840805053710938
+            },
+            {
+              "lat": 44.980084353075185,
+              "lon": 7.757720947265626
+            },
+            {
+              "lat": 45.03348650826708,
+              "lon": 7.470703125000001
+            }
+          ]
+        }
+      },
+      "$state": {
+        "store": "appState"
+      }
+    },
+    {
+      "geo_polygon": {
+        "ignore_unmapped": true,
+        "location": {
+          "points": [
+            {
+              "lat": 38.11698466711252,
+              "lon": 23.612365722656254
+            },
+            {
+              "lat": 37.82576856298881,
+              "lon": 23.65768432617188
+            },
+            {
+              "lat": 37.899493611399336,
+              "lon": 24.079284667968754
+            },
+            {
+              "lat": 38.165588259955186,
+              "lon": 23.977661132812504
+            }
+          ]
+        }
+      },
+      "meta": {
+        "negate": false,
+        "index": "117f5f30-78b3-11e9-9a3f-fddd48bc7817",
+        "disabled": true,
+        "alias": "Athens",
+        "type": "geo_polygon",
+        "key": "location",
+        "value": "{\n  \"lat\": 38.11698466711252,\n  \"lon\": 23.612365722656254\n}, {\n  \"lat\": 37.82576856298881,\n  \"lon\": 23.65768432617188\n}, {\n  \"lat\": 37.899493611399336,\n  \"lon\": 24.079284667968754\n}, {\n  \"lat\": 38.165588259955186,\n  \"lon\": 23.977661132812504\n}",
+        "params": {
+          "points": [
+            {
+              "lat": 38.11698466711252,
+              "lon": 23.612365722656254
+            },
+            {
+              "lat": 37.82576856298881,
+              "lon": 23.65768432617188
+            },
+            {
+              "lat": 37.899493611399336,
+              "lon": 24.079284667968754
+            },
+            {
+              "lat": 38.165588259955186,
+              "lon": 23.977661132812504
+            }
+          ]
+        }
+      },
+      "$state": {
+        "store": "appState"
+      }
+    },
+    {
+      "geo_polygon": {
+        "ignore_unmapped": true,
+        "location": {
+          "points": [
+            {
+              "lat": 41.9878062470425,
+              "lon": 12.211303710937502
+            },
+            {
+              "lat": 42.018421371226175,
+              "lon": 12.668609619140625
+            },
+            {
+              "lat": 41.74952743806636,
+              "lon": 12.711181640625
+            },
+            {
+              "lat": 41.74133042334841,
+              "lon": 12.225036621093752
+            }
+          ]
+        }
+      },
+      "meta": {
+        "negate": false,
+        "index": "117f5f30-78b3-11e9-9a3f-fddd48bc7817",
+        "disabled": true,
+        "alias": "Rome",
+        "type": "geo_polygon",
+        "key": "location",
+        "value": "{\n  \"lat\": 41.9878062470425,\n  \"lon\": 12.211303710937502\n}, {\n  \"lat\": 42.018421371226175,\n  \"lon\": 12.668609619140625\n}, {\n  \"lat\": 41.74952743806636,\n  \"lon\": 12.711181640625\n}, {\n  \"lat\": 41.74133042334841,\n  \"lon\": 12.225036621093752\n}",
+        "params": {
+          "points": [
+            {
+              "lat": 41.9878062470425,
+              "lon": 12.211303710937502
+            },
+            {
+              "lat": 42.018421371226175,
+              "lon": 12.668609619140625
+            },
+            {
+              "lat": 41.74952743806636,
+              "lon": 12.711181640625
+            },
+            {
+              "lat": 41.74133042334841,
+              "lon": 12.225036621093752
+            }
+          ]
+        }
+      },
+      "$state": {
+        "store": "appState"
+      }
+    },
+    {
+      "geo_polygon": {
+        "ignore_unmapped": true,
+        "location": {
+          "points": [
+            {
+              "lat": 42.47486662773886,
+              "lon": 11.550750732421877
+            },
+            {
+              "lat": 42.514357385466106,
+              "lon": 12.23876953125
+            },
+            {
+              "lat": 42.08368439682154,
+              "lon": 12.685089111328127
+            },
+            {
+              "lat": 42.00923838074514,
+              "lon": 11.7938232421875
+            }
+          ]
+        }
+      },
+      "meta": {
+        "negate": false,
+        "index": "117f5f30-78b3-11e9-9a3f-fddd48bc7817",
+        "disabled": true,
+        "alias": "Tuscia",
+        "type": "geo_polygon",
+        "key": "location",
+        "value": "{\n  \"lat\": 42.47486662773886,\n  \"lon\": 11.550750732421877\n}, {\n  \"lat\": 42.514357385466106,\n  \"lon\": 12.23876953125\n}, {\n  \"lat\": 42.08368439682154,\n  \"lon\": 12.685089111328127\n}, {\n  \"lat\": 42.00923838074514,\n  \"lon\": 11.7938232421875\n}",
+        "params": {
+          "points": [
+            {
+              "lat": 42.47486662773886,
+              "lon": 11.550750732421877
+            },
+            {
+              "lat": 42.514357385466106,
+              "lon": 12.23876953125
+            },
+            {
+              "lat": 42.08368439682154,
+              "lon": 12.685089111328127
+            },
+            {
+              "lat": 42.00923838074514,
+              "lon": 11.7938232421875
+            }
+          ]
+        }
+      },
+      "$state": {
+        "store": "appState"
+      }
+    },
+    {
+      "geo_bounding_box": {
+        "ignore_unmapped": true,
+        "location": {
+          "bottom_right": {
+            "lat": 46.38944459554492,
+            "lon": 11.774597167968752
+          },
+          "top_left": {
+            "lat": 46.47841173700898,
+            "lon": 11.644821166992188
+          }
+        }
+      },
+      "meta": {
+        "negate": false,
+        "index": "117f5f30-78b3-11e9-9a3f-fddd48bc7817",
+        "disabled": true,
+        "alias": "Trentino",
+        "type": "geo_bounding_box",
+        "key": "location",
+        "value": "{\n  \"lat\": 46.47841173700898,\n  \"lon\": 11.644821166992188\n} to {\n  \"lat\": 46.38944459554492,\n  \"lon\": 11.774597167968752\n}",
+        "params": {
+          "bottom_right": {
+            "lat": 46.38944459554492,
+            "lon": 11.774597167968752
+          },
+          "top_left": {
+            "lat": 46.47841173700898,
+            "lon": 11.644821166992188
+          }
+        }
+      },
+      "$state": {
+        "store": "appState"
+      }
+    },
+    {
+      "geo_bounding_box": {
+        "ignore_unmapped": true,
+        "location": {
+          "bottom_right": {
+            "lat": 48.50417062021825,
+            "lon": 2.9882812500000004
+          },
+          "top_left": {
+            "lat": 49.169433711612,
+            "lon": 1.549072265625
+          }
+        }
+      },
+      "meta": {
+        "negate": false,
+        "index": "117f5f30-78b3-11e9-9a3f-fddd48bc7817",
+        "disabled": true,
+        "alias": "Paris",
+        "type": "geo_bounding_box",
+        "key": "location",
+        "value": "{\n  \"lat\": 49.169433711612,\n  \"lon\": 1.549072265625\n} to {\n  \"lat\": 48.50417062021825,\n  \"lon\": 2.9882812500000004\n}",
+        "params": {
+          "bottom_right": {
+            "lat": 48.50417062021825,
+            "lon": 2.9882812500000004
+          },
+          "top_left": {
+            "lat": 49.169433711612,
+            "lon": 1.549072265625
+          }
+        }
+      },
+      "$state": {
+        "store": "appState"
+      }
+    }
+  ]
+}
